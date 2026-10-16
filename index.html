@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TestCase Buddy</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <b>halo</b> 
+    <!-- ===== Application Shell ===== -->
+    <div class="app-shell">
+
+      <!-- Header -->
+      <header class="app-header" role="banner">
+        <div class="header-logo" aria-hidden="true">🧪</div>
+        <div class="header-text">
+          <h1 class="header-title">TestCase Buddy</h1>
+          <p class="header-subtitle">AI Agent pembuat test case dari deskripsi fitur</p>
+        </div>
+      </header>
+
+      <!-- Conversation Area -->
+      <main class="chat-area" id="chatArea" role="log" aria-live="polite" aria-label="Area percakapan">
+        <!-- Messages are injected here by script.js -->
+      </main>
+
+      <!-- Quick Example Buttons -->
+      <section class="quick-examples" aria-label="Contoh cepat">
+        <span class="quick-label">Contoh cepat:</span>
+        <div class="quick-buttons">
+          <button
+            class="btn-quick"
+            data-example="Fitur login menggunakan email dan password. Pengguna harus bisa masuk ke sistem dengan kredensial yang valid. Sistem wajib menolak login dengan password yang salah atau akun yang tidak terdaftar."
+            aria-label="Contoh cepat: Login"
+          >Login</button>
+          <button
+            class="btn-quick"
+            data-example="Fitur upload foto profil. Pengguna dapat mengunggah foto dari perangkatnya dengan format JPG, PNG, atau GIF. Ukuran file maksimal 2 MB. Foto yang tidak sesuai format atau terlalu besar harus ditolak."
+            aria-label="Contoh cepat: Upload foto profil"
+          >Upload foto profil</button>
+          <button
+            class="btn-quick"
+            data-example="Fitur pembayaran online menggunakan transfer bank atau dompet digital. Pengguna memasukkan nominal dan mengkonfirmasi transaksi. Sistem harus menolak pembayaran dengan saldo tidak cukup atau nominal nol."
+            aria-label="Contoh cepat: Pembayaran"
+          >Pembayaran</button>
+        </div>
+      </section>
+
+      <!-- Input Area -->
+      <footer class="input-area" role="contentinfo">
+        <form class="input-form" id="inputForm" aria-label="Form input deskripsi fitur" novalidate>
+          <label for="featureInput" class="visually-hidden">Deskripsi fitur</label>
+          <textarea
+            id="featureInput"
+            class="input-textarea"
+            placeholder="Tuliskan deskripsi fitur di sini… (Enter untuk kirim, Shift+Enter untuk baris baru)"
+            rows="1"
+            aria-multiline="true"
+            autocomplete="off"
+            spellcheck="true"
+          ></textarea>
+          <button type="submit" class="btn-send" id="sendButton" aria-label="Kirim deskripsi">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+          </button>
+        </form>
+      </footer>
+
+    </div><!-- /.app-shell -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
